@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan's Wildlife Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Alan's Wildlife Gallery</h1>
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="photos" id="photoContainer">
+            <!-- JavaScript will automatically load images here -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Instagram: <a href="https://instagram.com/alan_photography.official" target="_blank">@alan_photography.official</a></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Alan's Wildlife Gallery</p>
+    </footer>
+
+    <script>
+        // List all your image filenames here (JPG or PNG)
+        const images = [
+            "image1.JPG",
+            "image2.jpg",
+            "image3.jpg",
+            "image4.png",
+            "image5.jpeg",
+            "image6.jpg",
+            "image7.jpg",
+            "image8.webp",
+            "image9.webp",
+            "image10.jpg",
+            "image11.jpeg",
+            "image12.jpg",
+            "image13.jpg",
+            "image14.png",
+            "image15.jpg",
+            "image16.jpg",
+            "image17.jpg",
+            "image18.jpg",
+            // Add more filenames as you add new photos
+        ];
+
+        const container = document.getElementById('photoContainer');
+
+        images.forEach(filename => {
+            const img = document.createElement('img');
+            img.src = "images/" + filename;
+            img.alt = filename.split('.')[0]; // uses filename as alt
+            container.appendChild(img);
+        });
+    </script>
+</body>
+</html>
